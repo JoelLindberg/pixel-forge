@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pixel Forge 0.5</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header" class="center">
+            <h1><span class="rock">PIXEL</span><span class="fire">FORGE</span></h1>
+        </div>
+        <div id="main" class="center">
+            <canvas id="drawingArea" width="384" height="384"></canvas>
+            <canvas id="drawingGrid" width="384" height="384"></canvas>
+        </div>
+        <div id="menu" class="center">
+            <span class="buttons">
+                <button onclick="pg.setDrawToolPen()">Pen</button>
+                <button onclick="pg.setDrawToolErase()">Eraser</button>
+                <!--<button onclick="pg.setDrawToolMirrorX()">Mirror X</button>-->
+                <input onclick="pg.toggleDrawToolMirrorX()" type="checkbox" id="mirror" class="checkbox" checked="false">
+                <label for="mirror" class="toggle">MirrorX</label>
+                <button onclick="pg.clearCanvas()">Clear</button>
+
+                <div class="sliderContainer">
+                    <input type="range" min="0" max="360" value="0" class="slider" id="hueSlider">
+                        <span style="color: rgb(127, 127, 127)">Hue: </span>
+                            <span id="hueSliderValue" style="color: rgb(127, 127, 127)"></span><br />
+                    
+                    <input type="range" min="0" max="100" value="50" class="slider" id="saturationSlider">
+                        <span style="color: rgb(127, 127, 127)">Saturation: </span>
+                                <span id="saturationSliderValue" style="color: rgb(127, 127, 127)"></span><br />
+                    
+                    <input type="range" min="0" max="100" value="50" class="slider" id="lightnessSlider">
+                        <span style="color: rgb(127, 127, 127)" style="color: rgb(127, 127, 127)">Lightness: </span>
+                            <span id="lightnessSliderValue" style="color: rgb(127, 127, 127)"></span><br />
+                </div>
+                <div class="currentColorContainer">
+                    <div id="demoBox" class="currentColor"></div>
+                </div>
+            </span>
+            
+            
+        </div>
+    </div>
+    <script src="pixel-forge.js"></script>
+</body>
+</html>

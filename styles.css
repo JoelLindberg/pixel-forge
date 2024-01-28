@@ -1,0 +1,91 @@
+html {
+    background-color: #221a15;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 38px;
+    text-align: center;
+    background: -webkit-linear-gradient(#e1e1e1, #555, #e1e1e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    color:rgb(56, 153, 0);
+}
+
+.fire {
+    background: -webkit-linear-gradient(#f8f53e, #fd6d25, #7f180a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rock {
+    background: -webkit-linear-gradient(#e4c6bf, #715554,#362a2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#wrap {
+    margin-top: 50px;
+}
+
+#main {
+    position: relative;
+    width: 384px;
+    height: 384px;
+}
+
+canvas { position: absolute; }
+
+#drawingArea {
+    z-index: 2;
+}
+
+#drawingGrid {
+    z-index: 1; 
+}
+
+#menu .buttons {
+    position: absolute;
+    padding: 20px;
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+.currentColor {
+    height: 20px;
+    width: 20px;
+}
+
+.slider {
+    width: 50px;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 20px;
+    background-color: rgb(18, 230, 10);
+    border-radius: 5px;
+    border: 1px solid rgb(100, 100, 100);
+    font-size: 9px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.checkbox {
+    display: none;
+}
+       
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+    background-color: rgb(94, 94, 94);
+}
